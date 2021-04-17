@@ -1,0 +1,8 @@
+You can access local JSON using jQuery.
+Load jQuery:  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+Load JSON:
+        $.getJSON("manyReleases2.json", function (data) {
+            //var changes2013 = request.response;
+            populateDiv(data);
+        });
