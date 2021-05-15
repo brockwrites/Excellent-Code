@@ -1,4 +1,4 @@
-From https://www.quora.com/How-do-I-search-for-contacts-in-distribution-groups-in-outlook
+'From https://www.quora.com/How-do-I-search-for-contacts-in-distribution-groups-in-outlook
     Sub FindInList() 
         Const MACRO_NAME = "Find Contact in List" 
         Dim olkFol As Object, _ 
