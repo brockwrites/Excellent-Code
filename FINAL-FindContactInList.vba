@@ -29,3 +29,16 @@ Sub FindContactInList()
     Set olkFol = Nothing
     Set olkLst = Nothing
 End Sub
+
+Function IsMember(olkLst As Outlook.DistListItem, strAdr As String) As Boolean
+'Used by FindContactInList()
+    Dim lngCnt As Integer, olkRec As Outlook.Recipient
+    For lngCnt = 1 To olkLst.MemberCount
+        Set olkRec = olkLst.GetMember(lngCnt)
+        If VBA.LCase(olkRec.Address) = VBA.LCase(strAdr) Then
+            IsMember = True
+            Exit For
+        End If
+    Next
+    Set olkRec = Nothing
+End Function
